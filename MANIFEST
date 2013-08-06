@@ -1,0 +1,14 @@
+Changes
+
+lib/Lim/Plugin/Example.pm
+lib/Lim/Plugin/Example/CLI.pm
+lib/Lim/Plugin/Example/Client.pm
+lib/Lim/Plugin/Example/Server.pm
+
+Makefile.PL
+MANIFEST			This list of files
+README
+t/00-load.t
+t/manifest.t
+t/pod-coverage.t
+t/pod.t

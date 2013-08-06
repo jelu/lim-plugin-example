@@ -1,0 +1,46 @@
+Source: liblim-plugin-example-perl
+Section: perl
+Priority: optional
+Build-Depends: debhelper (>= 7)
+Build-Depends-Indep: libcommon-sense-perl (>= 3), perl,
+ liblim-server-perl (>= 0.16-1~unstable+1),
+ liblim-cli-perl (>= 0.16-1~unstable+1)
+Maintainer: Your Name <your.name@some.email.com>
+Standards-Version: 3.9.1
+Homepage: http://your.homepage.com
+
+Package: liblim-plugin-example-common-perl
+Architecture: all
+Depends: ${misc:Depends}, ${perl:Depends},
+ liblim-common-perl (>= 0.16-1~unstable+1), libcommon-sense-perl (>= 3), perl
+Description: Common perl libraries for Example Lim plugin
+ Common perl libraries for Example Lim plugin.
+
+Package: liblim-plugin-example-server-perl
+Architecture: all
+Depends: ${misc:Depends}, ${perl:Depends},
+ liblim-plugin-example-common-perl (= 0.10-1~unstable+1),
+ liblim-server-perl (>= 0.16-1~unstable+1)
+Description: Server perl libraries for Example Lim plugin
+ Server perl libraries for Example Lim plugin.
+
+Package: liblim-plugin-example-client-perl
+Architecture: all
+Depends: ${misc:Depends}, ${perl:Depends},
+ liblim-plugin-example-common-perl (= 0.10-1~unstable+1)
+Description: Client perl libraries for Example Lim plugin
+ Client perl libraries for communicating with the Example Lim plugin.
+
+Package: liblim-plugin-example-cli-perl
+Architecture: all
+Depends: ${misc:Depends}, ${perl:Depends},
+ liblim-cli-perl (>= 0.16-1~unstable+1),
+ liblim-plugin-example-client-perl (= 0.10-1~unstable+1)
+Description: CLI perl libraries for Example Lim plugin
+ CLI perl libraries for communicating with the Example Lim plugin.
+
+Package: lim-management-console-example
+Architecture: all
+Depends: ${misc:Depends}, lim-management-console-common (>= 0.16-1~unstable+1)
+Description: Example Lim plugin Management Console files
+ Example Lim plugin Management Console files.
